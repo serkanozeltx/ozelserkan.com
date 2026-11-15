@@ -46,9 +46,11 @@ Keep the lists below up to date as decisions are made.
 ## Decisions
 
 - Site technology: Eleventy (decided 2026-11-16). Shared layouts keep the Turkish and English pages identical in structure, and publications come from one data file. The output is plain HTML using `design/tokens.css` and `design/components/components.css`, with no front-end framework. GitHub Actions builds and publishes the site. Local preview: `npx @11ty/eleventy --serve`. Jekyll was ruled out because the Mac's system Ruby (2.6) is too old, and plain HTML because headers and publication lists would be copied across 16+ pages.
+- URL structure (decided 2026-11-16): each language has its own folder, `/tr/` and `/en/`, as equals. `ozelserkan.com/` is a small page that sends visitors to the language their browser prefers, with plain "Türkçe" and "English" links for when JavaScript is off. Every page carries `hreflang` links to its other-language version.
+- Page addresses use each language's own words, in lowercase ASCII: `/tr/yayinlar/` and `/en/publications/`. This is the one place Turkish characters are dropped (`hakkimda`, not `hakkımda`), because browsers turn them into codes like `%C4%B1` in shared links. All page text keeps them. Each page's front matter has a shared key (for example `publications`) that pairs it with its other-language version for the language toggle.
+- Proposed addresses, to confirm as each page is agreed: About `/tr/hakkimda/` `/en/about/`; Research `/tr/arastirma/` `/en/research/`; Publications `/tr/yayinlar/` `/en/publications/`; Projects `/tr/projeler/` `/en/projects/`; Teaching & PD `/tr/ogretim/` `/en/teaching/`; Service `/tr/hizmet/` `/en/service/`; Contact `/tr/iletisim/` `/en/contact/`.
 
 ## Open decisions
 
-- URL structure for the two languages (for example `/` Turkish and `/en/` English, or the other way round).
 - Publication data source: BibTeX export from Google Scholar or ORCID.
 - DNS setup for ozelserkan.com pointing to GitHub Pages.
