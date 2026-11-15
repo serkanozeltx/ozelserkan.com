@@ -2,6 +2,8 @@
 
 This repository is Serkan Özel's personal academic website, published with GitHub Pages at https://ozelserkan.com (see `CNAME`). It is bilingual: Turkish and English.
 
+The GitHub repository is https://github.com/serkanozeltx/ozelserkan.com (public, branch `main`). Commits use the GitHub no-reply email set in this repo's local git config, so the personal email stays out of the public history.
+
 Serkan wants to learn how the site works, not only receive it. When you make a technical choice or change, explain briefly what you did and why, in plain language.
 
 ## Design
