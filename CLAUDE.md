@@ -30,7 +30,7 @@ Serkan wants to learn how the site works, not only receive it. When you make a t
 2. Then design it (a preview Serkan can look at).
 3. Then build it, commit with a clear message, and push only when Serkan says so.
 
-Keep the two lists below up to date as decisions are made.
+Keep the lists below up to date as decisions are made.
 
 ## Sitemap (draft — to be agreed)
 
@@ -43,9 +43,12 @@ Keep the two lists below up to date as decisions are made.
 - Service — editorial roles, curriculum work
 - Contact — and CV download
 
+## Decisions
+
+- Site technology: Eleventy (decided 2026-11-16). Shared layouts keep the Turkish and English pages identical in structure, and publications come from one data file. The output is plain HTML using `design/tokens.css` and `design/components/components.css`, with no front-end framework. GitHub Actions builds and publishes the site. Local preview: `npx @11ty/eleventy --serve`. Jekyll was ruled out because the Mac's system Ruby (2.6) is too old, and plain HTML because headers and publication lists would be copied across 16+ pages.
+
 ## Open decisions
 
-- Site technology: plain HTML/CSS (no build step, easiest to learn) or a static site generator (for example Eleventy or Jekyll, which make bilingual pages and a BibTeX publication list easier). Discuss before building.
 - URL structure for the two languages (for example `/` Turkish and `/en/` English, or the other way round).
 - Publication data source: BibTeX export from Google Scholar or ORCID.
 - DNS setup for ozelserkan.com pointing to GitHub Pages.
