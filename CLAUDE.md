@@ -23,6 +23,7 @@ Serkan wants to learn how the site works, not only receive it. When you make a t
 ## Sources outside this repo
 
 - The CV folder lives outside the repository. Serkan adds it to a session with `/add-dir <path>`. Read from it freely, but copy into the repo only what should be public (for example the final CV PDF). Drafts and private files never go into the repo: it is public.
+- When building a page turns up something missing from or conflicting with the CV, add it to `00_START_HERE/CV_Pending_Updates.md` in the CV folder (not in this repo). `CV_Update_Prompt.md` next to it is the prompt for applying those updates later.
 
 ## Way of working
 
@@ -49,6 +50,7 @@ Keep the lists below up to date as decisions are made.
 - URL structure (decided 2026-11-16): each language has its own folder, `/tr/` and `/en/`, as equals. `ozelserkan.com/` is a small page that sends visitors to the language their browser prefers, with plain "Türkçe" and "English" links for when JavaScript is off. Every page carries `hreflang` links to its other-language version.
 - Page addresses use each language's own words, in lowercase ASCII: `/tr/yayinlar/` and `/en/publications/`. This is the one place Turkish characters are dropped (`hakkimda`, not `hakkımda`), because browsers turn them into codes like `%C4%B1` in shared links. All page text keeps them. Each page's front matter has a shared key (for example `publications`) that pairs it with its other-language version for the language toggle.
 - Proposed addresses, to confirm as each page is agreed: About `/tr/hakkimda/` `/en/about/`; Research `/tr/arastirma/` `/en/research/`; Publications `/tr/yayinlar/` `/en/publications/`; Projects `/tr/projeler/` `/en/projects/`; Teaching & PD `/tr/ogretim/` `/en/teaching/`; Service `/tr/hizmet/` `/en/service/`; Contact `/tr/iletisim/` `/en/contact/`.
+- Contact and affiliation facts (confirmed 2026-11-16): email `ozels@bogazici.edu.tr` (the CV's `ozels@boun.edu.tr` is outdated); office phone +90 212 359 6592 is shown; the centre is "Center for Educational Technology and Research (ET UYGAR)". Graduate advisees are listed by name on Teaching & PD.
 
 ## Open decisions
 
