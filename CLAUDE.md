@@ -68,7 +68,8 @@ The agreed contents of each page, item by item, are in `notes/content-plan.md`.
 - Proposed addresses, to confirm as each page is agreed: About `/tr/hakkimda/` `/en/about/`; Research `/tr/arastirma/` `/en/research/`; Publications `/tr/yayinlar/` `/en/publications/`; Projects `/tr/projeler/` `/en/projects/`; Teaching & PD `/tr/ogretim/` `/en/teaching/`; Service `/tr/hizmet/` `/en/service/`; Contact `/tr/iletisim/` `/en/contact/`.
 - Contact and affiliation facts (confirmed 2026-11-16): email `ozels@bogazici.edu.tr` (the CV's `ozels@boun.edu.tr` is outdated); office phone +90 212 359 6592 is shown; the centre is "Center for Educational Technology and Research (ET UYGAR)". Graduate advisees are listed by name on Teaching & PD.
 - Publication data (decided 2026-11-16): the CV is the master list. ORCID (0000-0001-9772-052X), OpenAlex and CrossRef are used to check it; Scopus (56576457900), Web of Science ResearcherID (A-1509-2013) and Google Scholar (https://scholar.google.com/citations?user=o-m-twcAAAAJ) appear as profile links. Differences go to the CV pending-updates log, never straight onto the site.
+- Hosting and DNS (decided 2026-11-16): GitHub Pages publishes from GitHub Actions, with ozelserkan.com as the custom domain. The domain is registered at Hostinger, and its DNS is edited in Hostinger's DNS zone editor: four A records and four AAAA records for GitHub Pages on the apex, and `www` as a CNAME to `serkanozeltx.github.io`. The domain has no email (no MX records). HTTPS is switched on in the Pages settings once GitHub has issued the certificate.
 
 ## Open decisions
 
-- DNS setup for ozelserkan.com pointing to GitHub Pages.
+None at the moment.
