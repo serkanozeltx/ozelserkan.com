@@ -16,7 +16,7 @@ Grouped into three sections. Grant numbers and dates come from the CV, with Serk
 |---|---|---|---|
 | PI | Investigation of Abstraction Knowledge in Repeating Pattern for 4-6 Year-Old Children and Development of Online Repeating Pattern Assessment | TÜBİTAK 1001, #124K343 | 2025–2026 |
 | Researcher | Collaborative Research: A Multi-Lab Investigation of the Conceptual Foundations of Early Number Development (PI: Elizabeth Gunderson) | NSF ECR, #2201964 | 2022–2026 |
-| Collaborator (as Visiting Professor, Vanderbilt University; wording to confirm) | Exploring the Roles of Pattern and Spatial Skills in Early Mathematics Development (PI: Bethany Rittle-Johnson, Vanderbilt University) | IES, #R305A160132 | 2019–2021 |
+| Collaborator (as Visiting Professor, Vanderbilt University) | Exploring the Roles of Pattern and Spatial Skills in Early Mathematics Development (PI: Bethany Rittle-Johnson, Vanderbilt University) | IES, #R305A160132 | 2019–2021 |
 | PI | Mathematical Skills at Early Childhood: A Cognitive Perspective to Pattern Learning | TÜBİTAK 2219, #1059B191802263 | 2019–2021 |
 | PI | Exploring the Impact of a Computational Thinking Program on Middle Grade Students' Computational Thinking, Problem-Solving Skill, Motivation and Enthusiasm for Learning | Boğaziçi University & TEKFEN, #24D3TFV1 | 2024–2025 |
 | Researcher | Development of the Progressive Incorporation Perspective Among Prospective Secondary School Math Teacher Candidates' Effective Math Teaching | Boğaziçi University BAP, #11220 | 2017–2019 |
@@ -97,5 +97,4 @@ The CV is the master list. ORCID and OpenAlex (an open index that covers much of
 
 ## Open questions
 
-1. IES project wording (see the Research table).
-2. Exact years for each course: the folder years above are approximate.
+1. Exact years for each course: the folder years above are approximate.
