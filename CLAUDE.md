@@ -42,9 +42,10 @@ The agreed contents of each page, item by item, are in `notes/content-plan.md`.
 - About — bio, education, awards
 - Research — main areas and the questions behind them
 - Publications — by year, with filters
-- Projects — Research, Practice and Consultancy groups; ÇÖL (the lab) stands apart from them
+- Projects — Research, Practice and Consultancy groups
+- ÇÖL — the lab, on its own page, linked from Home, Research and Projects
 - Teaching & PD — Boğaziçi courses (current code with the earlier PRED code), teacher professional development, advising
-- Press — from the CV's press appearances (own page or a section of About: to decide)
+- Press — its own page, from the CV's press appearances
 - Service — editorial roles, curriculum work
 - Contact — and CV download
 
@@ -55,7 +56,7 @@ The agreed contents of each page, item by item, are in `notes/content-plan.md`.
 - Page addresses use each language's own words, in lowercase ASCII: `/tr/yayinlar/` and `/en/publications/`. This is the one place Turkish characters are dropped (`hakkimda`, not `hakkımda`), because browsers turn them into codes like `%C4%B1` in shared links. All page text keeps them. Each page's front matter has a shared key (for example `publications`) that pairs it with its other-language version for the language toggle.
 - Proposed addresses, to confirm as each page is agreed: About `/tr/hakkimda/` `/en/about/`; Research `/tr/arastirma/` `/en/research/`; Publications `/tr/yayinlar/` `/en/publications/`; Projects `/tr/projeler/` `/en/projects/`; Teaching & PD `/tr/ogretim/` `/en/teaching/`; Service `/tr/hizmet/` `/en/service/`; Contact `/tr/iletisim/` `/en/contact/`.
 - Contact and affiliation facts (confirmed 2026-11-16): email `ozels@bogazici.edu.tr` (the CV's `ozels@boun.edu.tr` is outdated); office phone +90 212 359 6592 is shown; the centre is "Center for Educational Technology and Research (ET UYGAR)". Graduate advisees are listed by name on Teaching & PD.
-- Publication data (decided 2026-11-16): the CV is the master list. ORCID (0000-0001-9772-052X), OpenAlex and CrossRef are used to check it; Scopus (56576457900), Web of Science ResearcherID (A-1509-2013) and Google Scholar appear as profile links. Differences go to the CV pending-updates log, never straight onto the site.
+- Publication data (decided 2026-11-16): the CV is the master list. ORCID (0000-0001-9772-052X), OpenAlex and CrossRef are used to check it; Scopus (56576457900), Web of Science ResearcherID (A-1509-2013) and Google Scholar (https://scholar.google.com/citations?user=o-m-twcAAAAJ) appear as profile links. Differences go to the CV pending-updates log, never straight onto the site.
 
 ## Open decisions
 
