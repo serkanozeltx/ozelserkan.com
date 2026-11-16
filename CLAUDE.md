@@ -33,6 +33,17 @@ Serkan wants to learn how the site works, not only receive it. When you make a t
 
 Keep the lists below up to date as decisions are made.
 
+## How the site is built
+
+- `src/` holds the pages. `src/tr/` and `src/en/` are the two languages; every file there gets `lang` and the base layout from the folder's `*.11tydata.json`.
+- Each page's front matter has `title`, `key` (shared with its other-language version, used by the language toggle and hreflang links), and `permalink` with the agreed address (for example `/tr/yayinlar/`). Optional: `navTitle`, `description`.
+- `src/_includes/layouts/base.njk` is the frame of every page (head, header, footer). `src/_data/site.js` holds the site name, the per-language interface words, and the header menu (five keys; an item appears once its page exists).
+- `src/assets/site.css` is page layout on top of the design system, using tokens only. `design/` stays the single source of the design system; `eleventy.config.js` copies its CSS and logos into the built site.
+- `src/index.njk` is `ozelserkan.com/`: Turkish browsers go to `/tr/`, everyone else to `/en/`.
+- Preview: `npm start`, then http://localhost:8080. Build: `npm run build` (output in `_site/`, not committed).
+- `.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to `main`. It needs Pages set to "GitHub Actions" in the repository settings.
+- Eleventy is pinned to an exact version in `package.json`.
+
 ## Sitemap (draft — to be agreed)
 
 The agreed contents of each page, item by item, are in `notes/content-plan.md`.

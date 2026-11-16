@@ -1,0 +1,13 @@
+{
+  "name": "ozelserkan.com",
+  "private": true,
+  "description": "Personal academic website of Serkan Özel, in Turkish and English",
+  "type": "module",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.7"
+  }
+}

@@ -1,0 +1,37 @@
+---
+permalink: /index.html
+eleventyExcludeFromCollections: true
+---
+{#- ozelserkan.com/ itself: sends visitors to the language their browser
+    prefers (Turkish for Turkish browsers, English for everyone else).
+    The two links work without JavaScript. -#}
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.name }}</title>
+  <link rel="alternate" hreflang="tr" href="{{ site.url }}/tr/">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/en/">
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  <script>
+    (function () {
+      var langs = navigator.languages || [navigator.language || ""];
+      var tr = String(langs[0] || "").toLowerCase().indexOf("tr") === 0;
+      location.replace(tr ? "/tr/" : "/en/");
+    })();
+  </script>
+  <link rel="stylesheet" href="/assets/tokens.css">
+  <link rel="stylesheet" href="/assets/components.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <main class="site-main">
+    <h1 class="h1">{{ site.name }}</h1>
+    <p class="site-choices">
+      <a class="so-btn" href="/tr/" hreflang="tr" lang="tr">Türkçe</a>
+      <a class="so-btn" href="/en/" hreflang="en" lang="en">English</a>
+    </p>
+  </main>
+</body>
+</html>

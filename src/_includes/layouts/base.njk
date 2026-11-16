@@ -1,0 +1,64 @@
+{#- The frame around every Turkish and English page: head, header, main, footer.
+    Each page gives `title`, `lang` (from its folder) and `key` (shared with
+    its other-language version). -#}
+{%- set other = "en" if lang == "tr" else "tr" -%}
+{%- set counterpart = collections.all | pageFor(key, other) -%}
+{%- set otherUrl = counterpart.url if counterpart else site.langs[other].home -%}
+<!doctype html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if key == "home" %}{{ site.name }}{% else %}{{ title }} · {{ site.name }}{% endif %}</title>
+  {%- if description %}
+  <meta name="description" content="{{ description }}">
+  {%- endif %}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  {#- Tells search engines which page is the same content in the other language. #}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ page.url }}">
+  {%- if counterpart %}
+  <link rel="alternate" hreflang="{{ other }}" href="{{ site.url }}{{ counterpart.url }}">
+  {%- endif %}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/tokens.css">
+  <link rel="stylesheet" href="/assets/components.css">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <a class="site-skip" href="#main">{{ site.langs[lang].skip }}</a>
+
+  <header class="so-header">
+    <a class="so-header-brand" href="{{ site.langs[lang].home }}">
+      {% include "partials/mark.njk" %}
+      <span>{{ site.name }}</span>
+    </a>
+    <nav class="so-header-nav" aria-label="{{ site.langs[lang].navLabel }}">
+      {%- for navKey in site.nav %}
+        {%- set item = collections.all | pageFor(navKey, lang) %}
+        {%- if item %}
+      <a href="{{ item.url }}"{% if item.url == page.url %} aria-current="page"{% endif %}>{{ item.data.navTitle or item.data.title }}</a>
+        {%- endif %}
+      {%- endfor %}
+    </nav>
+    <div class="so-lang" role="group" aria-label="{{ site.langs[lang].langLabel }}">
+      {%- for code in ["tr", "en"] %}
+        {%- if code == lang %}
+      <span aria-current="true">{{ site.langs[code].code }}</span>
+        {%- else %}
+      <a href="{{ otherUrl }}" hreflang="{{ code }}" lang="{{ code }}" title="{{ site.langs[code].name }}">{{ site.langs[code].code }}</a>
+        {%- endif %}
+      {%- endfor %}
+    </div>
+  </header>
+
+  <main id="main" class="site-main">
+    {{ content | safe }}
+  </main>
+
+  <footer class="site-footer">
+    <p class="small">© {{ "" | year }} {{ site.name }}</p>
+  </footer>
+</body>
+</html>
